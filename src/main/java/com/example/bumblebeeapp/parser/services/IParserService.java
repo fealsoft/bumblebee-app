@@ -1,4 +1,4 @@
-package com.example.bumblebeeapp.parser;
+package com.example.bumblebeeapp.parser.services;
 
 import com.example.bumblebeeapp.common.WordParseNorm;
 

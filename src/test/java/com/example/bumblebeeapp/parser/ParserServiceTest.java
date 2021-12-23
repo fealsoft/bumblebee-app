@@ -1,6 +1,7 @@
 package com.example.bumblebeeapp.parser;
 
 import com.example.bumblebeeapp.common.WordParseNorm;
+import com.example.bumblebeeapp.parser.services.IParserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,7 +1,8 @@
-package com.example.bumblebeeapp.parser;
+package com.example.bumblebeeapp.parser.services;
 
 import com.example.bumblebeeapp.common.PosTag;
 import com.example.bumblebeeapp.common.WordParseNorm;
+import com.example.bumblebeeapp.parser.services.IParserService;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.pipeline.CoreDocument;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
