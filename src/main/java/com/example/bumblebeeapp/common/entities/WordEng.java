@@ -1,18 +1,28 @@
 package com.example.bumblebeeapp.common.entities;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Table;
 
-@Table("WordEng")
+import javax.persistence.*;
+import java.util.Set;
+
+@Entity
 public class WordEng {
 
     @Id
     private Integer id;
     private String name;
 
-    public WordEng(Integer id, String name) {
+    @OneToMany(fetch = FetchType.EAGER)
+    @JoinColumn(name = "WordEngId")
+    private Set<POSLevelEng> posLevelEngs;
+
+    public WordEng(Integer id, String name, Set<POSLevelEng> posLevelEngs) {
         this.id = id;
         this.name = name;
+        this.posLevelEngs = posLevelEngs;
+    }
+
+    public WordEng() {
+
     }
 
     public Integer getId() {
@@ -31,11 +41,20 @@ public class WordEng {
         this.name = name;
     }
 
+    public Set<POSLevelEng> getPosLevelEngs() {
+        return posLevelEngs;
+    }
+
+    public void setPosLevelEngs(Set<POSLevelEng> posLevelEngs) {
+        this.posLevelEngs = posLevelEngs;
+    }
+
     @Override
     public String toString() {
         return "WordEng{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", posLevelEngs=" + posLevelEngs +
                 '}';
     }
 }

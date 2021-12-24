@@ -1,7 +1,7 @@
 package com.example.bumblebeeapp.dictionary;
 
-import com.example.bumblebeeapp.common.entities.WordUkr;
-import com.example.bumblebeeapp.dictionary.repositories.WordUkrRepository;
+import com.example.bumblebeeapp.common.entities.POSLevelEng;
+import com.example.bumblebeeapp.dictionary.repositories.POSLevelEngRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -11,15 +11,17 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest
-public class WordUkrRepositoryTest {
+public class POSLevelEngRepositoryTest {
+
 
     @Autowired
-    WordUkrRepository wordUkrRepository;
+    POSLevelEngRepository posLevelEngRepository;
 
     @Test
     void testGetAll() {
-        List<WordUkr> result = (List<WordUkr>) wordUkrRepository.findAll();
+        List<POSLevelEng> result = (List<POSLevelEng>) posLevelEngRepository.findAll();
 
         assertTrue(result.size() > 8000);
     }
+
 }

@@ -1,7 +1,7 @@
 package com.example.bumblebeeapp.dictionary.rest;
 
-import com.example.bumblebeeapp.common.entities.WordEng;
-import com.example.bumblebeeapp.common.entities.WordUkr;
+import com.example.bumblebeeapp.common.entities.WordEngLite;
+import com.example.bumblebeeapp.common.entities.WordUkrLite;
 import com.example.bumblebeeapp.dictionary.services.IDictionaryService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,12 +20,12 @@ public class DictionaryRestController {
     }
 
     @GetMapping("eng")
-    public List<WordEng> allEnglishWords() {
+    public List<WordEngLite> allEnglishWords() {
         return dictionaryService.getAllEnglishWords();
     }
 
     @GetMapping("ukr")
-    public List<WordUkr> allUkrainianWords() {
+    public List<WordUkrLite> allUkrainianWords() {
         return dictionaryService.getAllUkrainianWords();
     }
 }

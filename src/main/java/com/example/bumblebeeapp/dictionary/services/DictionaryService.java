@@ -1,9 +1,9 @@
 package com.example.bumblebeeapp.dictionary.services;
 
-import com.example.bumblebeeapp.common.entities.WordEng;
-import com.example.bumblebeeapp.common.entities.WordUkr;
-import com.example.bumblebeeapp.dictionary.repositories.WordEngRepository;
-import com.example.bumblebeeapp.dictionary.repositories.WordUkrRepository;
+import com.example.bumblebeeapp.common.entities.WordEngLite;
+import com.example.bumblebeeapp.common.entities.WordUkrLite;
+import com.example.bumblebeeapp.dictionary.repositories.WordEngLiteRepository;
+import com.example.bumblebeeapp.dictionary.repositories.WordUkrLiteRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,22 +11,22 @@ import java.util.List;
 @Service
 public class DictionaryService implements IDictionaryService {
 
-    final private WordEngRepository wordEngRepository;
-    final private WordUkrRepository wordUkrRepository;
+    final private WordEngLiteRepository wordEngLiteRepository;
+    final private WordUkrLiteRepository wordUkrLiteRepository;
 
 
-    public DictionaryService(WordEngRepository wordEngRepository, WordUkrRepository wordUkrRepository) {
-        this.wordEngRepository = wordEngRepository;
-        this.wordUkrRepository = wordUkrRepository;
+    public DictionaryService(WordEngLiteRepository wordEngLiteRepository, WordUkrLiteRepository wordUkrLiteRepository) {
+        this.wordEngLiteRepository = wordEngLiteRepository;
+        this.wordUkrLiteRepository = wordUkrLiteRepository;
     }
 
     @Override
-    public List<WordEng> getAllEnglishWords() {
-        return wordEngRepository.findAll();
+    public List<WordEngLite> getAllEnglishWords() {
+        return (List<WordEngLite>) wordEngLiteRepository.findAll();
     }
 
     @Override
-    public List<WordUkr> getAllUkrainianWords() {
-        return wordUkrRepository.findAll();
+    public List<WordUkrLite> getAllUkrainianWords() {
+        return (List<WordUkrLite>) wordUkrLiteRepository.findAll();
     }
 }

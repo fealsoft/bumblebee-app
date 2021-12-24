@@ -17,7 +17,7 @@ public class WordEngRepositoryTest {
 
     @Test
     void testGetAll() {
-        List<WordEng> result = wordEngRepository.findAll();
+        List<WordEng> result = (List<WordEng>) wordEngRepository.findAll();
 
         assertTrue(result.size() > 8000);
     }

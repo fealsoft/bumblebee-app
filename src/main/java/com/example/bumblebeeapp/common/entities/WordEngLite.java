@@ -1,33 +1,26 @@
 package com.example.bumblebeeapp.common.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-import javax.persistence.*;
-
+/**
+ * Lite version of WordEng
+ */
 @Entity
-public class WordUkr {
+@Table(name = "WordEng")
+public class WordEngLite {
 
     @Id
     private Integer id;
     private String name;
 
-    @ManyToOne()
-    @JoinColumn(name = "partOfSpeechUkrId")
-    private PartOfSpeechUkr partOfSpeechUkr;
-
-    @ManyToOne()
-    @JoinColumn(name = "GrammaticalGenderUkrId")
-    private GrammaticalGenderUkr grammaticalGenderUkr;
-
-    @ManyToOne()
-    @JoinColumn(name = "GrammaticalAnimacyUkrId")
-    private GrammaticalAnimacyUkr grammaticalAnimacyUkr;
-
-    public WordUkr(Integer id, String name) {
+    public WordEngLite(Integer id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public WordUkr() {
+    public WordEngLite() {
 
     }
 
@@ -49,7 +42,7 @@ public class WordUkr {
 
     @Override
     public String toString() {
-        return "WordUkr{" +
+        return "WordEngLite{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';

@@ -1,14 +1,14 @@
 package com.example.bumblebeeapp.dictionary.services;
 
-import com.example.bumblebeeapp.common.entities.WordEng;
-import com.example.bumblebeeapp.common.entities.WordUkr;
+import com.example.bumblebeeapp.common.entities.WordEngLite;
+import com.example.bumblebeeapp.common.entities.WordUkrLite;
 
 import java.util.List;
 
 public interface IDictionaryService {
 
-    List<WordEng> getAllEnglishWords();
+    List<WordEngLite> getAllEnglishWords();
 
-    List<WordUkr> getAllUkrainianWords();
+    List<WordUkrLite> getAllUkrainianWords();
 
 }
