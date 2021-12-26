@@ -1,23 +1,23 @@
-package com.example.bumblebeeapp.common.entities;
+package com.example.bumblebeeapp.common.entities.words;
+
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
-@Table(name = "PartOfSpeechUkr")
-public class PartOfSpeechUkr {
+public class PartOfSpeechEng {
 
     @Id
     private Integer id;
     private String name;
 
-    public PartOfSpeechUkr() {
-    }
-
-    public PartOfSpeechUkr(Integer id, String name) {
+    public PartOfSpeechEng(Integer id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public PartOfSpeechEng() {
+
     }
 
     public Integer getId() {
@@ -38,7 +38,7 @@ public class PartOfSpeechUkr {
 
     @Override
     public String toString() {
-        return "PartOfSpeechUkr{" +
+        return "PartOfSpeechEng{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';

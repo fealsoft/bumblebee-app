@@ -1,7 +1,7 @@
 package com.example.bumblebeeapp.dictionary.services;
 
-import com.example.bumblebeeapp.common.entities.WordEngLite;
-import com.example.bumblebeeapp.common.entities.WordUkrLite;
+import com.example.bumblebeeapp.common.entities.words.WordEngLite;
+import com.example.bumblebeeapp.common.entities.words.WordUkrLite;
 
 import java.util.List;
 

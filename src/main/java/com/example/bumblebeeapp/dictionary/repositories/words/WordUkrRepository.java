@@ -1,6 +1,6 @@
-package com.example.bumblebeeapp.dictionary.repositories;
+package com.example.bumblebeeapp.dictionary.repositories.words;
 
-import com.example.bumblebeeapp.common.entities.WordUkr;
+import com.example.bumblebeeapp.common.entities.words.WordUkr;
 import org.springframework.data.repository.CrudRepository;
 
 

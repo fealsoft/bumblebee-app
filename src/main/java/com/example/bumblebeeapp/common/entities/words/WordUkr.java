@@ -1,4 +1,4 @@
-package com.example.bumblebeeapp.common.entities;
+package com.example.bumblebeeapp.common.entities.words;
 
 
 import javax.persistence.*;

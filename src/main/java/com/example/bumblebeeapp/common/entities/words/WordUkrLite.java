@@ -1,22 +1,26 @@
-package com.example.bumblebeeapp.common.entities;
+package com.example.bumblebeeapp.common.entities.words;
 
-
-import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Entity;
 
+/**
+ * Lite version of WordUkr
+ */
 @Entity
-public class GrammaticalAnimacyUkr {
+@Table(name = "WordUkr")
+public class WordUkrLite {
 
     @Id
     private Integer id;
     private String name;
 
-    public GrammaticalAnimacyUkr(Integer id, String name) {
+    public WordUkrLite(Integer id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public GrammaticalAnimacyUkr() {
+    public WordUkrLite() {
 
     }
 
@@ -38,7 +42,7 @@ public class GrammaticalAnimacyUkr {
 
     @Override
     public String toString() {
-        return "GrammaticalAnimacyUkr{" +
+        return "WordUkrLite{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';

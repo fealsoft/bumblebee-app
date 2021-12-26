@@ -1,9 +1,9 @@
 package com.example.bumblebeeapp.dictionary.services;
 
-import com.example.bumblebeeapp.common.entities.WordEngLite;
-import com.example.bumblebeeapp.common.entities.WordUkrLite;
-import com.example.bumblebeeapp.dictionary.repositories.WordEngLiteRepository;
-import com.example.bumblebeeapp.dictionary.repositories.WordUkrLiteRepository;
+import com.example.bumblebeeapp.common.entities.words.WordEngLite;
+import com.example.bumblebeeapp.common.entities.words.WordUkrLite;
+import com.example.bumblebeeapp.dictionary.repositories.words.WordEngLiteRepository;
+import com.example.bumblebeeapp.dictionary.repositories.words.WordUkrLiteRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

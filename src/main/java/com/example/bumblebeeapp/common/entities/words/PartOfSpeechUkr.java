@@ -1,27 +1,23 @@
-package com.example.bumblebeeapp.common.entities;
+package com.example.bumblebeeapp.common.entities.words;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Entity;
 
-/**
- * Lite version of WordUkr
- */
 @Entity
-@Table(name = "WordUkr")
-public class WordUkrLite {
+@Table(name = "PartOfSpeechUkr")
+public class PartOfSpeechUkr {
 
     @Id
     private Integer id;
     private String name;
 
-    public WordUkrLite(Integer id, String name) {
-        this.id = id;
-        this.name = name;
+    public PartOfSpeechUkr() {
     }
 
-    public WordUkrLite() {
-
+    public PartOfSpeechUkr(Integer id, String name) {
+        this.id = id;
+        this.name = name;
     }
 
     public Integer getId() {
@@ -42,7 +38,7 @@ public class WordUkrLite {
 
     @Override
     public String toString() {
-        return "WordUkrLite{" +
+        return "PartOfSpeechUkr{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';

@@ -1,7 +1,7 @@
-package com.example.bumblebeeapp.dictionary;
+package com.example.bumblebeeapp.dictionary.repositories.words;
 
-import com.example.bumblebeeapp.common.entities.WordUkrLite;
-import com.example.bumblebeeapp.dictionary.repositories.WordUkrLiteRepository;
+import com.example.bumblebeeapp.common.entities.words.WordUkrLite;
+import com.example.bumblebeeapp.dictionary.repositories.words.WordUkrLiteRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

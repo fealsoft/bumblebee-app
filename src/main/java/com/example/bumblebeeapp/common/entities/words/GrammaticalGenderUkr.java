@@ -1,22 +1,23 @@
-package com.example.bumblebeeapp.common.entities;
+package com.example.bumblebeeapp.common.entities.words;
+
 
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class PartOfSpeechEng {
+public class GrammaticalGenderUkr {
 
     @Id
     private Integer id;
     private String name;
 
-    public PartOfSpeechEng(Integer id, String name) {
+    public GrammaticalGenderUkr(Integer id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public PartOfSpeechEng() {
+    public GrammaticalGenderUkr() {
 
     }
 
@@ -38,7 +39,7 @@ public class PartOfSpeechEng {
 
     @Override
     public String toString() {
-        return "PartOfSpeechEng{" +
+        return "GrammaticalGenderUkr{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
