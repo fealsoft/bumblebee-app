@@ -3,6 +3,7 @@ package com.example.bumblebeeapp.dictionary.rest;
 import com.example.bumblebeeapp.common.entities.words.WordEngLite;
 import com.example.bumblebeeapp.common.entities.words.WordUkrLite;
 import com.example.bumblebeeapp.dictionary.services.IDictionaryService;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 @RequestMapping("dictionary")
 public class DictionaryRestController {
 

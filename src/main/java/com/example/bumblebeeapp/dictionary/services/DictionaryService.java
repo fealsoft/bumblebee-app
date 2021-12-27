@@ -22,11 +22,11 @@ public class DictionaryService implements IDictionaryService {
 
     @Override
     public List<WordEngLite> getAllEnglishWords() {
-        return (List<WordEngLite>) wordEngLiteRepository.findAll();
+        return wordEngLiteRepository.findAllByOrderByName();
     }
 
     @Override
     public List<WordUkrLite> getAllUkrainianWords() {
-        return (List<WordUkrLite>) wordUkrLiteRepository.findAll();
+        return wordUkrLiteRepository.findAllByOrderByName();
     }
 }
