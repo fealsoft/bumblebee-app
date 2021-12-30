@@ -14,17 +14,14 @@ public class WordUkr {
     @JoinColumn(name = "partOfSpeechUkrId")
     private PartOfSpeechUkr partOfSpeechUkr;
 
-    @ManyToOne()
-    @JoinColumn(name = "GrammaticalGenderUkrId")
-    private GrammaticalGenderUkr grammaticalGenderUkr;
+    private String Comment;
 
-    @ManyToOne()
-    @JoinColumn(name = "GrammaticalAnimacyUkrId")
-    private GrammaticalAnimacyUkr grammaticalAnimacyUkr;
 
-    public WordUkr(Integer id, String name) {
+    public WordUkr(Integer id, String name, PartOfSpeechUkr partOfSpeechUkr, String comment) {
         this.id = id;
         this.name = name;
+        this.partOfSpeechUkr = partOfSpeechUkr;
+        Comment = comment;
     }
 
     public WordUkr() {
@@ -47,11 +44,29 @@ public class WordUkr {
         this.name = name;
     }
 
+    public PartOfSpeechUkr getPartOfSpeechUkr() {
+        return partOfSpeechUkr;
+    }
+
+    public void setPartOfSpeechUkr(PartOfSpeechUkr partOfSpeechUkr) {
+        this.partOfSpeechUkr = partOfSpeechUkr;
+    }
+
+    public String getComment() {
+        return Comment;
+    }
+
+    public void setComment(String comment) {
+        Comment = comment;
+    }
+
     @Override
     public String toString() {
         return "WordUkr{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", partOfSpeechUkr=" + partOfSpeechUkr +
+                ", Comment='" + Comment + '\'' +
                 '}';
     }
 }
