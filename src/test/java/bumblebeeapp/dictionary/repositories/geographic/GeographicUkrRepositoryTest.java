@@ -1,7 +1,6 @@
 package bumblebeeapp.dictionary.repositories.geographic;
 
 import bumblebeeapp.common.entities.geographic.GeographicUkr;
-import bumblebeeapp.dictionary.repositories.geographic.GeographicUkrRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,9 +1,6 @@
 package bumblebeeapp.common.entities.geographic;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 public class GeographicEng {
@@ -11,15 +8,14 @@ public class GeographicEng {
     @Id
     private Integer id;
 
-    @ManyToOne
-    @JoinColumn(name = "GeographicTypeEngId")
-    private GeographicTypeEng geographicTypeEng;
+    @Enumerated(EnumType.STRING)
+    private GeographicType geographicType;
 
     private String name;
 
-    public GeographicEng(Integer id, GeographicTypeEng geographicTypeEng, String name) {
+    public GeographicEng(Integer id, GeographicType geographicType, String name) {
         this.id = id;
-        this.geographicTypeEng = geographicTypeEng;
+        this.geographicType = geographicType;
         this.name = name;
     }
 
@@ -34,12 +30,12 @@ public class GeographicEng {
         this.id = id;
     }
 
-    public GeographicTypeEng getGeographicTypeEng() {
-        return geographicTypeEng;
+    public GeographicType getGeographicType() {
+        return geographicType;
     }
 
-    public void setGeographicTypeEng(GeographicTypeEng geographicTypeEng) {
-        this.geographicTypeEng = geographicTypeEng;
+    public void setGeographicType(GeographicType geographicType) {
+        this.geographicType = geographicType;
     }
 
     public String getName() {
@@ -54,7 +50,7 @@ public class GeographicEng {
     public String toString() {
         return "GeographicEng{" +
                 "id=" + id +
-                ", geographicTypeEng=" + geographicTypeEng +
+                ", geographicType=" + geographicType +
                 ", name='" + name + '\'' +
                 '}';
     }

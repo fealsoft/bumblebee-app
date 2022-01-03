@@ -1,9 +1,6 @@
 package bumblebeeapp.common.entities.geographic;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 public class GeographicUkr {
@@ -11,20 +8,18 @@ public class GeographicUkr {
     @Id
     private Integer id;
 
-    @ManyToOne
-    @JoinColumn(name = "GeographicTypeUkrId")
-    private GeographicTypeUkr geographicTypeUkr;
+    @Enumerated(EnumType.STRING)
+    private GeographicType geographicType;
 
-    @ManyToOne
-    @JoinColumn(name = "GeographicGrammaticalGenderUkrId")
-    private GeographicGrammaticalGenderUkr grammaticalGenderUkr;
+    @Enumerated(EnumType.STRING)
+    private GeographicGrammaticalGender geographicGrammaticalGender;
 
     private String name;
 
-    public GeographicUkr(Integer id, GeographicTypeUkr geographicTypeUkr, GeographicGrammaticalGenderUkr grammaticalGenderUkr, String name) {
+    public GeographicUkr(Integer id, GeographicType geographicType, GeographicGrammaticalGender geographicGrammaticalGender, String name) {
         this.id = id;
-        this.geographicTypeUkr = geographicTypeUkr;
-        this.grammaticalGenderUkr = grammaticalGenderUkr;
+        this.geographicType = geographicType;
+        this.geographicGrammaticalGender = geographicGrammaticalGender;
         this.name = name;
     }
 
@@ -39,20 +34,20 @@ public class GeographicUkr {
         this.id = id;
     }
 
-    public GeographicTypeUkr getGeographicTypeUkr() {
-        return geographicTypeUkr;
+    public GeographicType getGeographicType() {
+        return geographicType;
     }
 
-    public void setGeographicTypeUkr(GeographicTypeUkr geographicTypeUkr) {
-        this.geographicTypeUkr = geographicTypeUkr;
+    public void setGeographicType(GeographicType geographicType) {
+        this.geographicType = geographicType;
     }
 
-    public GeographicGrammaticalGenderUkr getGrammaticalGenderUkr() {
-        return grammaticalGenderUkr;
+    public GeographicGrammaticalGender getGeographicGrammaticalGender() {
+        return geographicGrammaticalGender;
     }
 
-    public void setGrammaticalGenderUkr(GeographicGrammaticalGenderUkr grammaticalGenderUkr) {
-        this.grammaticalGenderUkr = grammaticalGenderUkr;
+    public void setGeographicGrammaticalGender(GeographicGrammaticalGender geographicGrammaticalGender) {
+        this.geographicGrammaticalGender = geographicGrammaticalGender;
     }
 
     public String getName() {
@@ -67,8 +62,8 @@ public class GeographicUkr {
     public String toString() {
         return "GeographicUkr{" +
                 "id=" + id +
-                ", geographicTypeUkr=" + geographicTypeUkr +
-                ", grammaticalGenderUkr=" + grammaticalGenderUkr +
+                ", geographicType=" + geographicType +
+                ", geographicGrammaticalGender=" + geographicGrammaticalGender +
                 ", name='" + name + '\'' +
                 '}';
     }
