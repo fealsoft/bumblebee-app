@@ -1,10 +1,7 @@
 package bumblebeeapp.common.entities.name;
 
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 public class NameEng {
@@ -13,14 +10,13 @@ public class NameEng {
     private Integer id;
     private String name;
 
-    @ManyToOne()
-    @JoinColumn(name = "GenderNameEngId")
-    private GenderNameEng genderNameEng;
+    @Enumerated(EnumType.STRING)
+    private GenderName genderName;
 
-    public NameEng(Integer id, String name, GenderNameEng genderNameEng) {
+    public NameEng(Integer id, String name, GenderName genderName) {
         this.id = id;
         this.name = name;
-        this.genderNameEng = genderNameEng;
+        this.genderName = genderName;
     }
 
     public NameEng() {
@@ -42,12 +38,12 @@ public class NameEng {
         this.name = name;
     }
 
-    public GenderNameEng getGenderNameEng() {
-        return genderNameEng;
+    public GenderName getGenderName() {
+        return genderName;
     }
 
-    public void setGenderNameEng(GenderNameEng genderNameEng) {
-        this.genderNameEng = genderNameEng;
+    public void setGenderName(GenderName genderName) {
+        this.genderName = genderName;
     }
 
     @Override
@@ -55,7 +51,7 @@ public class NameEng {
         return "NameEng{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", genderNameEng=" + genderNameEng +
+                ", genderName=" + genderName +
                 '}';
     }
 }
