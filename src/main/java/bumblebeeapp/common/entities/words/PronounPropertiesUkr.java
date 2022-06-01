@@ -1,9 +1,6 @@
 package bumblebeeapp.common.entities.words;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 public class PronounPropertiesUkr {
@@ -11,16 +8,12 @@ public class PronounPropertiesUkr {
     @Id
     private Integer id;
 
-    @ManyToOne
-    @JoinColumn(name = "PronounNumberUkrId")
+    @Enumerated(EnumType.STRING)
     private PronounNumberUkr pronounNumberUkr;
 
-    @ManyToOne
-    @JoinColumn(name = "PronounGenderUkrId")
+    @Enumerated(EnumType.STRING)
     private PronounGenderUkr pronounGenderUkr;
 
-    @ManyToOne
-    @JoinColumn(name = "PronounPersonUkrId")
+    @Enumerated(EnumType.STRING)
     private PronounPersonUkr pronounPersonUkr;
-
 }
