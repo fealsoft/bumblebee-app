@@ -1,45 +1,18 @@
 package bumblebeeapp.common.entities.words;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+public enum PronounDemonstrativeNumberEng {
 
-@Entity
-public class PronounDemonstrativeNumberEng {
+    SINGULAR("singular"),
+    PLURAL("plural");
 
-    @Id
-    private Integer id;
-    private String name;
+    private String text;
 
-    public PronounDemonstrativeNumberEng(Integer id, String name) {
-        this.id = id;
-        this.name = name;
+
+    PronounDemonstrativeNumberEng(String text) {
+        this.text = text;
     }
 
-    public PronounDemonstrativeNumberEng() {
-
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        return "PronounDemonstrativeNumberEng{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
+    public String getText() {
+        return text;
     }
 }

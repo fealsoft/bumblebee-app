@@ -12,7 +12,6 @@ public class PronounDemonstrativePropertiesEng {
     @JoinColumn(name = "POSLevelEngId")
     POSLevelEng posLevelEng;
 
-    @ManyToOne
-    @JoinColumn(name = "PronounDemonstrativeNumberEngId")
+    @Enumerated(EnumType.STRING)
     private PronounDemonstrativeNumberEng pronounDemonstrativeNumberEng;
 }
