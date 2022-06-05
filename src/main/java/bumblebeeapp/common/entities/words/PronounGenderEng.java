@@ -1,46 +1,21 @@
 package bumblebeeapp.common.entities.words;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
 
-@Entity
-public class PronounGenderEng {
+public enum PronounGenderEng {
 
-    @Id
-    private Integer id;
-    private String name;
+    NONE("None"),
+    MALE("Male"),
+    FEMALE("Female");
 
-    public PronounGenderEng(Integer id, String name) {
-        this.id = id;
-        this.name = name;
+    private String text;
+
+
+    PronounGenderEng(String text) {
+        this.text = text;
     }
 
-
-    public PronounGenderEng() {
-
+    public String getText() {
+        return text;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        return "PronounGenderEng{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
-    }
 }
