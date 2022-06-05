@@ -3,9 +3,9 @@ package bumblebeeapp.common.entities.words;
 
 public enum PronounPersonTypeEng {
 
-    SUBJECT("subject"),
-    OBJECT("object"),
-    SUBJECT_OBJECT("subject/object");
+    SUBJECT("Subject"),
+    OBJECT("Object"),
+    SUBJECT_OBJECT("Subject/Object");
 
     private String text;
 

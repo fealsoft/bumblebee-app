@@ -12,8 +12,7 @@ public class PronounPropertiesEng {
     @JoinColumn(name = "POSLevelEngId")
     POSLevelEng posLevelEng;
 
-    @ManyToOne
-    @JoinColumn(name = "PronounTypeEngId")
+    @Enumerated(EnumType.STRING)
     private PronounTypeEng pronounTypeEng;
 
     @ManyToOne

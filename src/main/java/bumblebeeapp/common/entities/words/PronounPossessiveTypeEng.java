@@ -1,45 +1,20 @@
 package bumblebeeapp.common.entities.words;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+public enum PronounPossessiveTypeEng {
 
-@Entity
-public class PronounPossessiveTypeEng {
+    DETERMINER("Determiner"),
+    PRONOUN("Pronoun"),
+    DETERMINER_PRONOUN("Determiner Pronoun");
 
-    @Id
-    private Integer id;
-    private String name;
+    private String text;
 
-    public PronounPossessiveTypeEng(Integer id, String name) {
-        this.id = id;
-        this.name = name;
+
+    PronounPossessiveTypeEng(String text) {
+        this.text = text;
     }
 
-    public PronounPossessiveTypeEng() {
-
+    public String getText() {
+        return text;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        return "PronounPossessiveTypeEng{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
-    }
 }
