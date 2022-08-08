@@ -15,8 +15,7 @@ public class PronounPossessivePropertiesEng {
     @Enumerated(EnumType.STRING)
     private PronounPossessiveTypeEng pronounPossessiveTypeEng;
 
-    @ManyToOne
-    @JoinColumn(name = "PronounNumberEngId")
+    @Enumerated(EnumType.STRING)
     private PronounNumberEng pronounNumberEng;
 
     @Enumerated(EnumType.STRING)
