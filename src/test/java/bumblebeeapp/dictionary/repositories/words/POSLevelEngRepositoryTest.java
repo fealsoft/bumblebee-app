@@ -1,7 +1,6 @@
 package bumblebeeapp.dictionary.repositories.words;
 
 import bumblebeeapp.common.entities.words.POSLevelEng;
-import bumblebeeapp.dictionary.repositories.words.POSLevelEngRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

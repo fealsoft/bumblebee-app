@@ -1,6 +1,5 @@
 package bumblebeeapp.dictionary.repositories.words;
 
-import bumblebeeapp.common.entities.words.CasePronounDemonstrativeUkr;
 import bumblebeeapp.common.entities.words.CasePronounPersonalUkr;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
