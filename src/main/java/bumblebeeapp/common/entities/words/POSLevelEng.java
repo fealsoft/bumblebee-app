@@ -10,8 +10,7 @@ public class POSLevelEng {
     @Id
     private Integer id;
 
-    @ManyToOne
-    @JoinColumn(name = "PartOfSpeechEngId")
+    @Enumerated(EnumType.STRING)
     private PartOfSpeechEng partOfSpeechEng;
 
     @OneToMany(fetch = FetchType.EAGER)

@@ -1,46 +1,31 @@
 package bumblebeeapp.common.entities.words;
 
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+public enum PartOfSpeechEng {
 
-@Entity
-public class PartOfSpeechEng {
+    NOUN("Noun"),
+    VERB("Verb"),
+    ADJECTIVE("Adjective"),
+    CARDINAL_NUMBER("Cardinal number"),
+    PROPER_NOUN("Proper noun"),
+    PRONOUN_PERSONAL("Pronoun personal"),
+    DETERMINER("Determiner"),
+    ADVERB("Adverb"),
+    CONJUNCTION("Conjunction"),
+    PREPOSITION("Preposition"),
+    MODAL_VERB("Modal verb"),
+    EXCLAMATION("Exclamation"),
+    PRONOUN_POSSESSIVE("Pronoun possessive"),
+    PRONOUN_DEMONSTRATIVE("Pronoun demonstrative");
 
-    @Id
-    private Integer id;
-    private String name;
 
-    public PartOfSpeechEng(Integer id, String name) {
-        this.id = id;
-        this.name = name;
+    private String text;
+
+    PartOfSpeechEng(String text) {
+        this.text = text;
     }
 
-    public PartOfSpeechEng() {
-
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        return "PartOfSpeechEng{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
+    public String getText() {
+        return text;
     }
 }
