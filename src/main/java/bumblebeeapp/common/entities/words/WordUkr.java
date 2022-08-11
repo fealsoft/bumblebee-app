@@ -10,8 +10,7 @@ public class WordUkr {
     private Integer id;
     private String name;
 
-    @ManyToOne()
-    @JoinColumn(name = "partOfSpeechUkrId")
+    @Enumerated(EnumType.STRING)
     private PartOfSpeechUkr partOfSpeechUkr;
 
     private String Comment;
