@@ -9,13 +9,13 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class DictionaryService implements IDictionaryService {
+public class WordsService implements IWordsService {
 
     final private WordEngLiteRepository wordEngLiteRepository;
     final private WordUkrLiteRepository wordUkrLiteRepository;
 
 
-    public DictionaryService(WordEngLiteRepository wordEngLiteRepository, WordUkrLiteRepository wordUkrLiteRepository) {
+    public WordsService(WordEngLiteRepository wordEngLiteRepository, WordUkrLiteRepository wordUkrLiteRepository) {
         this.wordEngLiteRepository = wordEngLiteRepository;
         this.wordUkrLiteRepository = wordUkrLiteRepository;
     }

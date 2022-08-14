@@ -5,10 +5,12 @@ import bumblebeeapp.common.entities.words.WordUkrLite;
 
 import java.util.List;
 
-public interface IDictionaryService {
+public interface IWordsService {
 
     List<WordEngLite> getAllEnglishWords();
 
     List<WordUkrLite> getAllUkrainianWords();
+
+
 
 }

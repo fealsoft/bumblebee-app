@@ -1,6 +1,6 @@
 package bumblebeeapp.dictionary.rest;
 
-import bumblebeeapp.dictionary.services.IDictionaryService;
+import bumblebeeapp.dictionary.services.IWordsService;
 import bumblebeeapp.common.entities.words.WordEngLite;
 import bumblebeeapp.common.entities.words.WordUkrLite;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -12,22 +12,22 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
-@RequestMapping("dictionary")
-public class DictionaryRestController {
+@RequestMapping("words")
+public class WordsRestController {
 
-    private final IDictionaryService dictionaryService;
+    private final IWordsService wordsService;
 
-    public DictionaryRestController(IDictionaryService dictionaryService) {
-        this.dictionaryService = dictionaryService;
+    public WordsRestController(IWordsService wordsService) {
+        this.wordsService = wordsService;
     }
 
-    @GetMapping("eng")
+    @GetMapping("eng-all")
     public List<WordEngLite> allEnglishWords() {
-        return dictionaryService.getAllEnglishWords();
+        return wordsService.getAllEnglishWords();
     }
 
-    @GetMapping("ukr")
+    @GetMapping("ukr-all")
     public List<WordUkrLite> allUkrainianWords() {
-        return dictionaryService.getAllUkrainianWords();
+        return wordsService.getAllUkrainianWords();
     }
 }
