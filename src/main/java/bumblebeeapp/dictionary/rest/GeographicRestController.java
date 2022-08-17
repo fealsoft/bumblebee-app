@@ -1,12 +1,10 @@
 package bumblebeeapp.dictionary.rest;
 
+import bumblebeeapp.common.entities.geographic.CaseGeographicUkrLite;
 import bumblebeeapp.common.entities.geographic.GeographicEng;
 import bumblebeeapp.common.entities.geographic.GeographicUkr;
 import bumblebeeapp.dictionary.services.IGeographicService;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -31,4 +29,8 @@ public class GeographicRestController {
         return geographicService.getAllUkrainianGeographic();
     }
 
+    @GetMapping("case-ukr")
+    public CaseGeographicUkrLite caseGeographicUkrLite(@RequestParam Integer geographicUkrId) {
+        return geographicService.findByGeographicUkrId(geographicUkrId);
+    }
 }
