@@ -3,6 +3,7 @@ package bumblebeeapp.dictionary.rest;
 import bumblebeeapp.common.entities.geographic.CaseGeographicUkrLite;
 import bumblebeeapp.common.entities.geographic.GeographicEng;
 import bumblebeeapp.common.entities.geographic.GeographicUkr;
+import bumblebeeapp.common.entities.geographic.TranslateGeographicUkr;
 import bumblebeeapp.dictionary.services.IGeographicService;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,5 +33,13 @@ public class GeographicRestController {
     @GetMapping("case-ukr")
     public CaseGeographicUkrLite caseGeographicUkrLite(@RequestParam Integer geographicUkrId) {
         return geographicService.findByGeographicUkrId(geographicUkrId);
+    }
+
+    @GetMapping("translate")
+    public GeographicUkr translate(@RequestParam Integer geographicEngId) {
+
+        TranslateGeographicUkr translateGeographicUkr = geographicService.findTranslateByGeographicEngId(geographicEngId);
+
+        return translateGeographicUkr != null ? translateGeographicUkr.getGeographicUkr() : null;
     }
 }
