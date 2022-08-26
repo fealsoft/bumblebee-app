@@ -13,7 +13,7 @@ public interface IGeographicService {
 
     List<GeographicUkr> getAllUkrainianGeographic();
 
-    CaseGeographicUkr findByGeographicUkrId(Integer GeographicUkrId);
+    CaseGeographicUkr findByGeographicUkrId(Integer geographicUkrId);
 
     TranslateGeographicUkr findTranslateByGeographicEngId(Integer geographicEngId);
 
