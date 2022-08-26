@@ -1,6 +1,8 @@
 package bumblebeeapp.common.entities.words;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -11,6 +13,7 @@ public class WordUkr {
     private String name;
 
     @Enumerated(EnumType.STRING)
+    @JsonIgnore
     private PartOfSpeechUkr partOfSpeechUkr;
 
     private String Comment;

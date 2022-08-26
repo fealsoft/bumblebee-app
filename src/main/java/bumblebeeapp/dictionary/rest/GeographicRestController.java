@@ -1,6 +1,6 @@
 package bumblebeeapp.dictionary.rest;
 
-import bumblebeeapp.common.entities.geographic.CaseGeographicUkrLite;
+import bumblebeeapp.common.entities.geographic.CaseGeographicUkr;
 import bumblebeeapp.common.entities.geographic.GeographicEng;
 import bumblebeeapp.common.entities.geographic.GeographicUkr;
 import bumblebeeapp.common.entities.geographic.TranslateGeographicUkr;
@@ -31,7 +31,7 @@ public class GeographicRestController {
     }
 
     @GetMapping("case-ukr")
-    public CaseGeographicUkrLite caseGeographicUkrLite(@RequestParam Integer geographicUkrId) {
+    public CaseGeographicUkr caseGeographicUkr(@RequestParam Integer geographicUkrId) {
         return geographicService.findByGeographicUkrId(geographicUkrId);
     }
 

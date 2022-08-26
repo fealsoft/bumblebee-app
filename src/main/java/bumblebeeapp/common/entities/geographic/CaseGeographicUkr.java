@@ -1,5 +1,7 @@
 package bumblebeeapp.common.entities.geographic;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 
@@ -11,6 +13,7 @@ public class CaseGeographicUkr {
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "GeographicUkrId")
+    @JsonIgnore
     private GeographicUkr geographicUkr;
 
     private String nominative;

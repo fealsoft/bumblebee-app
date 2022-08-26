@@ -1,10 +1,10 @@
 package bumblebeeapp.dictionary.services;
 
-import bumblebeeapp.common.entities.geographic.CaseGeographicUkrLite;
+import bumblebeeapp.common.entities.geographic.CaseGeographicUkr;
 import bumblebeeapp.common.entities.geographic.GeographicEng;
 import bumblebeeapp.common.entities.geographic.GeographicUkr;
 import bumblebeeapp.common.entities.geographic.TranslateGeographicUkr;
-import bumblebeeapp.dictionary.repositories.geographic.CaseGeographicUkrLiteRepository;
+import bumblebeeapp.dictionary.repositories.geographic.CaseGeographicUkrRepository;
 import bumblebeeapp.dictionary.repositories.geographic.GeographicEngRepository;
 import bumblebeeapp.dictionary.repositories.geographic.GeographicUkrRepository;
 import bumblebeeapp.dictionary.repositories.geographic.TranslateGeographicUkrRepository;
@@ -17,13 +17,13 @@ public class GeographicService implements IGeographicService{
 
     final private GeographicEngRepository geographicEngRepository;
     final private GeographicUkrRepository geographicUkrRepository;
-    final private CaseGeographicUkrLiteRepository caseGeographicUkrLiteRepository;
+    final private CaseGeographicUkrRepository caseGeographicUkrRepository;
     final private TranslateGeographicUkrRepository translateGeographicUkrRepository;
 
-    public GeographicService(GeographicEngRepository geographicEngRepository, GeographicUkrRepository geographicUkrRepository, CaseGeographicUkrLiteRepository caseGeographicUkrLiteRepository, TranslateGeographicUkrRepository translateGeographicUkrRepository) {
+    public GeographicService(GeographicEngRepository geographicEngRepository, GeographicUkrRepository geographicUkrRepository, CaseGeographicUkrRepository caseGeographicUkrRepository, TranslateGeographicUkrRepository translateGeographicUkrRepository) {
         this.geographicEngRepository = geographicEngRepository;
         this.geographicUkrRepository = geographicUkrRepository;
-        this.caseGeographicUkrLiteRepository = caseGeographicUkrLiteRepository;
+        this.caseGeographicUkrRepository = caseGeographicUkrRepository;
         this.translateGeographicUkrRepository = translateGeographicUkrRepository;
     }
 
@@ -38,8 +38,8 @@ public class GeographicService implements IGeographicService{
     }
 
     @Override
-    public CaseGeographicUkrLite findByGeographicUkrId(Integer geographicUkrId) {
-        return caseGeographicUkrLiteRepository.findByGeographicUkrId(geographicUkrId);
+    public CaseGeographicUkr findByGeographicUkrId(Integer geographicUkrId) {
+        return caseGeographicUkrRepository.findByGeographicUkrId(geographicUkrId);
     }
 
     @Override

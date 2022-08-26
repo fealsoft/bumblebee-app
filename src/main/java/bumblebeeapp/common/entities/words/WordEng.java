@@ -1,6 +1,8 @@
 package bumblebeeapp.common.entities.words;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Set;
 
@@ -13,6 +15,7 @@ public class WordEng {
 
     @OneToMany(fetch = FetchType.EAGER)
     @JoinColumn(name = "WordEngId")
+    @JsonIgnore
     private Set<POSLevelEng> posLevelEngs;
 
     public WordEng(Integer id, String name, Set<POSLevelEng> posLevelEngs) {

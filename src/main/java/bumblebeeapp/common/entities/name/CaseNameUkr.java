@@ -1,5 +1,7 @@
 package bumblebeeapp.common.entities.name;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -10,6 +12,7 @@ public class CaseNameUkr {
 
     @OneToOne
     @JoinColumn(name = "NameUkrId")
+    @JsonIgnore
     private NameUkr nameUkr;
 
     private String nominative;

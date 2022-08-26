@@ -1,9 +1,9 @@
 package bumblebeeapp.dictionary.services;
 
-import bumblebeeapp.dictionary.repositories.words.WordEngLiteRepository;
-import bumblebeeapp.dictionary.repositories.words.WordUkrLiteRepository;
-import bumblebeeapp.common.entities.words.WordEngLite;
-import bumblebeeapp.common.entities.words.WordUkrLite;
+import bumblebeeapp.common.entities.words.WordEng;
+import bumblebeeapp.common.entities.words.WordUkr;
+import bumblebeeapp.dictionary.repositories.words.WordEngRepository;
+import bumblebeeapp.dictionary.repositories.words.WordUkrRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,22 +11,22 @@ import java.util.List;
 @Service
 public class WordsService implements IWordsService {
 
-    final private WordEngLiteRepository wordEngLiteRepository;
-    final private WordUkrLiteRepository wordUkrLiteRepository;
+    final private WordEngRepository wordEngRepository;
+    final private WordUkrRepository wordUkrRepository;
 
 
-    public WordsService(WordEngLiteRepository wordEngLiteRepository, WordUkrLiteRepository wordUkrLiteRepository) {
-        this.wordEngLiteRepository = wordEngLiteRepository;
-        this.wordUkrLiteRepository = wordUkrLiteRepository;
+    public WordsService(WordEngRepository wordEngRepository, WordUkrRepository wordUkrRepository) {
+        this.wordEngRepository = wordEngRepository;
+        this.wordUkrRepository = wordUkrRepository;
     }
 
     @Override
-    public List<WordEngLite> getAllEnglishWords() {
-        return wordEngLiteRepository.findAllByOrderByName();
+    public List<WordEng> getAllEnglishWords() {
+        return wordEngRepository.findAllByOrderByName();
     }
 
     @Override
-    public List<WordUkrLite> getAllUkrainianWords() {
-        return wordUkrLiteRepository.findAllByOrderByName();
+    public List<WordUkr> getAllUkrainianWords() {
+        return wordUkrRepository.findAllByOrderByName();
     }
 }

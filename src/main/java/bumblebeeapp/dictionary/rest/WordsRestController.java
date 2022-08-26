@@ -1,8 +1,8 @@
 package bumblebeeapp.dictionary.rest;
 
+import bumblebeeapp.common.entities.words.WordEng;
+import bumblebeeapp.common.entities.words.WordUkr;
 import bumblebeeapp.dictionary.services.IWordsService;
-import bumblebeeapp.common.entities.words.WordEngLite;
-import bumblebeeapp.common.entities.words.WordUkrLite;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,12 +22,12 @@ public class WordsRestController {
     }
 
     @GetMapping("eng-all")
-    public List<WordEngLite> allEnglishWords() {
+    public List<WordEng> allEnglishWords() {
         return wordsService.getAllEnglishWords();
     }
 
     @GetMapping("ukr-all")
-    public List<WordUkrLite> allUkrainianWords() {
+    public List<WordUkr> allUkrainianWords() {
         return wordsService.getAllUkrainianWords();
     }
 }
