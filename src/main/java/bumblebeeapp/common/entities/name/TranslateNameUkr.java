@@ -1,6 +1,8 @@
 package bumblebeeapp.common.entities.name;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -14,6 +16,7 @@ public class TranslateNameUkr {
 
     @ManyToOne
     @JoinColumn(name = "NameEngId")
+    @JsonIgnore
     private NameEng nameEng;
 
     @ManyToOne
