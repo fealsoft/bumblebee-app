@@ -1,12 +1,10 @@
 package bumblebeeapp.dictionary.rest;
 
+import bumblebeeapp.common.entities.surname.CaseSurnameUkr;
 import bumblebeeapp.common.entities.surname.SurnameEng;
 import bumblebeeapp.common.entities.surname.SurnameUkr;
 import bumblebeeapp.dictionary.services.ISurnamesService;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -30,6 +28,11 @@ public class SurnamesRestController {
     @GetMapping("ukr-all")
     public List<SurnameUkr> allUkrainianNames() {
         return surnamesService.getAllUkrainianSurnames();
+    }
+
+    @GetMapping("case-ukr")
+    public CaseSurnameUkr caseSurnameUkr(@RequestParam Integer surnameUkrId) {
+        return surnamesService.findBySurnameUkrId(surnameUkrId);
     }
 
 }

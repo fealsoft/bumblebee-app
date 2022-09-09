@@ -4,4 +4,8 @@ import bumblebeeapp.common.entities.surname.CaseSurnameUkr;
 import org.springframework.data.repository.CrudRepository;
 
 public interface CaseSurnameUkrRepository extends CrudRepository<CaseSurnameUkr, Integer> {
+
+    CaseSurnameUkr findBySurnameUkrId(Integer surnameUkrId);
+
+
 }
