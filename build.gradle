@@ -1,6 +1,6 @@
 plugins {
-    id 'org.springframework.boot' version '2.6.2'
-    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'org.springframework.boot' version '2.7.5'
+    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
     id 'java'
 }
 
@@ -17,10 +17,10 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-    implementation 'mysql:mysql-connector-java:8.0.25'
+    implementation 'mysql:mysql-connector-java:8.0.31'
 
-    implementation 'edu.stanford.nlp:stanford-corenlp:4.3.2'
-    implementation 'edu.stanford.nlp:stanford-corenlp:4.3.2:models'
+    implementation 'edu.stanford.nlp:stanford-corenlp:4.5.1'
+    implementation 'edu.stanford.nlp:stanford-corenlp:4.5.1:models'
 }
 
 test {
