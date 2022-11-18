@@ -3,6 +3,7 @@ package bumblebeeapp.dictionary.rest;
 import bumblebeeapp.common.entities.surname.CaseSurnameUkr;
 import bumblebeeapp.common.entities.surname.SurnameEng;
 import bumblebeeapp.common.entities.surname.SurnameUkr;
+import bumblebeeapp.common.entities.surname.TranslateSurnameUkr;
 import bumblebeeapp.dictionary.services.ISurnamesService;
 import org.springframework.web.bind.annotation.*;
 
@@ -35,4 +36,8 @@ public class SurnamesRestController {
         return surnamesService.findBySurnameUkrId(surnameUkrId);
     }
 
+    @GetMapping("translate")
+    public TranslateSurnameUkr findTranslateBySurnameEngId(Integer surnameEngId) {
+        return surnamesService.findTranslateBySurnameEngId(surnameEngId);
+    }
 }
