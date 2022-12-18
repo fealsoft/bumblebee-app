@@ -1,6 +1,8 @@
 package bumblebeeapp.common.entities.words;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Set;
 
@@ -9,6 +11,11 @@ public class POSLevelEng {
 
     @Id
     private Integer id;
+
+    @ManyToOne
+    @JoinColumn(name = "WordEngId")
+    @JsonIgnore
+    private WordEng wordEng;
 
     @Enumerated(EnumType.STRING)
     private PartOfSpeechEng partOfSpeechEng;
@@ -51,10 +58,20 @@ public class POSLevelEng {
         this.detailLevelEngs = detailLevelEngs;
     }
 
+    public WordEng getWordEng() {
+        return wordEng;
+    }
+
+    public void setWordEng(WordEng wordEng) {
+        this.wordEng = wordEng;
+    }
+
+
     @Override
     public String toString() {
         return "POSLevelEng{" +
                 "id=" + id +
+                ", wordEng=" + wordEng +
                 ", partOfSpeechEng=" + partOfSpeechEng +
                 ", detailLevelEngs=" + detailLevelEngs +
                 '}';

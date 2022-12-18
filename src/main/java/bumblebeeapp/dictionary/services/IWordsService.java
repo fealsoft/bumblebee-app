@@ -1,5 +1,6 @@
 package bumblebeeapp.dictionary.services;
 
+import bumblebeeapp.common.entities.words.POSLevelEng;
 import bumblebeeapp.common.entities.words.WordEng;
 import bumblebeeapp.common.entities.words.WordUkr;
 
@@ -11,6 +12,6 @@ public interface IWordsService {
 
     List<WordUkr> getAllUkrainianWords();
 
-
+    List<POSLevelEng> findPOSLevelEngByWordEngId(Integer wordEngId);
 
 }

@@ -7,6 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest
@@ -23,4 +24,10 @@ public class POSLevelEngRepositoryTest {
         assertTrue(result.size() > 8000);
     }
 
+    @Test
+    void testFindPOSLevelEngByWordEngId() {
+        List<POSLevelEng> result = posLevelEngRepository.findPOSLevelEngByWordEngId(1);
+
+        assertEquals(2, result.size());
+    }
 }
